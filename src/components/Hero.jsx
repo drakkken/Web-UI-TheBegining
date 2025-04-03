@@ -1,7 +1,49 @@
 import React from "react";
+import Section from "./Section";
+import Button from "./Button";
+import curve from "../assets/hero/curve.png";
 
 const Hero = () => {
-  return <div>Hero</div>;
+  return (
+    <div>
+      <Section
+        className="pt-[12rem] -mt-[5.25] "
+        crosses
+        crossesOffset="lg:translate-y-[5.25rem]"
+        customPaddings
+        id="hero"
+      >
+        <div className=" hover:border container relative">
+          <div
+            className=" hover:border relative z-1 max-w-[62rem]
+          mx-auto text-center mb-[4rem] md:mb-[20] lg:mb-[6rem]"
+          >
+            <h1 className="h1 mb-6">
+              Explore The Possibliteis of AI Chatting With{" "}
+              <span className="inline-block relative">
+                BrainWave
+                <img
+                  src={curve}
+                  className="absolute top-full  w-full left-0 xl:-mt-2 "
+                  width={624}
+                  height={28}
+                  alt="Curve"
+                />
+              </span>
+            </h1>
+            <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+              Unleash the power of AI within brainwave
+            </p>
+          </div>
+          <div className="hover:border flex items-center justify-center">
+            <Button href="/pricing" white>
+              Get Started
+            </Button>
+          </div>
+        </div>
+      </Section>
+    </div>
+  );
 };
 
 export default Hero;
